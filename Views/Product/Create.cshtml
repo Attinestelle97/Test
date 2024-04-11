@@ -1,0 +1,70 @@
+﻿@model Test_2.Models.Product
+
+@{
+    ViewData["Title"] = "New";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Créer un Produit</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    @if (ViewBag.Erreur != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.Erreur
+                        </div>
+                    }
+
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Champ</th>
+                                    <th scope="col">Valeur</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label asp-for="Name" class="control-label">Name</label>
+                                    </td>
+                                    <td>
+                                        <input asp-for="Name" class="form-control" />
+                                        <span asp-validation-for="  Name" class="text-danger"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label asp-for="PriceHt" class="control-label">PriceHT</label>
+                                    </td>
+                                    <td>
+                                        <input asp-for="PriceHt" class="form-control" />
+                                        <span asp-validation-for="PriceHt" class="text-danger"></span>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2" class="text-center">
+                                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Index">Retour à la liste</a>
+        </div>
+    </div>
+
+   
+</div>
+

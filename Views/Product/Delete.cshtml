@@ -1,0 +1,16 @@
+﻿@model Test_2.Models.Product
+
+@{
+    ViewData["Title"] = "Supprimer le produit";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p>Prix : @Model.PriceHt</p>
+    <form method="post" action="@Url.Action("ConfirmDelete", "Product", new { id = Model.Id })">
+        @Html.AntiForgeryToken() <!-- Ajoute une protection contre les attaques CSRF -->
+        <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+    </form>
+</div>
