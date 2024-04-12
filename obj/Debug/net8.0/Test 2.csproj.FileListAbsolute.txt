@@ -134,3 +134,4 @@ C:\Users\EstelleATTIN\source\repos\Test 2\Test 2\obj\Debug\net8.0\refint\Test 2.
 C:\Users\EstelleATTIN\source\repos\Test 2\Test 2\obj\Debug\net8.0\Test 2.pdb
 C:\Users\EstelleATTIN\source\repos\Test 2\Test 2\obj\Debug\net8.0\Test 2.genruntimeconfig.cache
 C:\Users\EstelleATTIN\source\repos\Test 2\Test 2\obj\Debug\net8.0\ref\Test 2.dll
+C:\Users\EstelleATTIN\source\repos\Test 2\Test 2\obj\Debug\net8.0\Test 2.sourcelink.json
