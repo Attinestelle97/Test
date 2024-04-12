@@ -17,14 +17,14 @@ namespace Test_2.Controllers
 
         }
         //cette action crée un nouveau produit
-        public IActionResult Create()
+        public IActionResult New()
         {
             return View();
         }
         //cette action vérifie si le produit existe déja avant de le créer 
         //cette action vérifie si le produit existe déja avant de le créer 
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult New(Product product)
 
         {
             if (_context.Products.Any(d => d.Id.Equals(product.Id)))
